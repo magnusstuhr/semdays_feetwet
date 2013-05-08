@@ -1,0 +1,13 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://data.computas.com/semwebworkshop> a void:Dataset ;
+    dcterms:title "Friend of a Friend" ;
+    dcterms:description "Inneholder FOAF data om alle på Semweb workshopen";
+    dcterms:modified "2012-11-22"^^xsd:date;
+    void:sparqlEndpoint <http://data.computas.com:3050/dataset/query>;
+    void:exampleResource <http://data.computas.com/semwebworkshop/person/Magnus_Stuhr> .

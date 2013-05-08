@@ -1,0 +1,32 @@
+/* A stylesheet inteded for pages with visualizations (sgvizler)
+and thus need to be wider */
+
+@import url('result.css');
+
+#page {
+	-webkit-box-shadow: #888 0px 5px 24px;
+	-moz-box-shadow: 0 5px 24px #888;
+	background: white;
+	margin: 0px auto 50px;
+	width: 1140px;
+}
+
+
+
+nav.site {
+	background: url("../images/ereg-banner-big.png") no-repeat 0% 0%;
+	padding-top: 54px;
+}
+
+
+#result {
+	float: left;
+	clear: left;
+	padding-right: 43px;
+	padding-left: 43px;
+	width: 738px;
+}
+
+.panel section {
+	width: 696px;
+}

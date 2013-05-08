@@ -1,0 +1,122 @@
+##At graph <http://data.computas.com/graph/voc/er_lokasjon>
+
+
+@prefix lokasjon:  <http://data.computas.com/informasjonsmodell/lokasjon/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+lokasjon:Adresse
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality 1 ;
+                owl:onProperty lokasjon:poststed
+              ] ;
+       dc:subject <http://opendata.computas.no/dict/page/Br%C3%B8nn%C3%B8ysundregistrene/Begrep/Adresse/4967> . 
+       
+
+lokasjon:Adresse
+	  rdfs:label "Adresse"^^xsd:string ;
+      rdf:type owl:Class .
+
+lokasjon:By
+      rdfs:label "By"^^xsd:string ;
+	  rdf:type owl:Class .
+
+lokasjon:Fylke
+      rdfs:label "Fylke"^^xsd:string ;
+      rdf:type owl:Class .
+
+lokasjon:Kommune
+      rdfs:label "Kommune"^^xsd:string ;
+      rdf:type owl:Class .
+
+lokasjon:Land
+      rdf:type owl:Class ;
+      rdfs:label "Land"^^xsd:string ;
+      dc:subject <http://opendata.computas.no/dict/guid/Brønnøysundregistrene/Begrep/Land/4908> .
+
+lokasjon:Poststed
+      rdfs:label "Poststed"^^xsd:string ;
+      rdf:type owl:Class .
+
+lokasjon:adressebeskrivelse
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain lokasjon:Adresse ;
+      rdfs:label "adressebeskrivelse"^^xsd:string ;
+      rdfs:range xsd:string .
+
+lokasjon:fylke
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain lokasjon:Kommune ;
+      rdfs:label "fylke"^^xsd:string ;
+      rdfs:range lokasjon:Fylke .
+
+lokasjon:fylkesnummer
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain lokasjon:Fylke ;
+      rdfs:label "fylkesnummer"^^xsd:string ;
+      rdfs:range xsd:string .
+
+lokasjon:kommune
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain lokasjon:By ;
+      rdfs:label "kommune"^^xsd:string ;
+      rdfs:range lokasjon:Kommune .
+
+lokasjon:kommunenummer
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain lokasjon:Kommune ;
+      rdfs:label "kommunenummer"^^xsd:string ;
+      rdfs:range xsd:string .
+
+lokasjon:land
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain lokasjon:Fylke ;
+      rdfs:label "land"^^xsd:string ;
+      rdfs:range lokasjon:Land .
+
+lokasjon:landkode
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain lokasjon:Land ;
+      rdfs:label "landkode"^^xsd:string ;
+      rdfs:range xsd:string .
+
+lokasjon:navn
+      rdf:type owl:DatatypeProperty ;
+      rdfs:label "navn"^^xsd:string ;
+      rdfs:range xsd:string .
+
+lokasjon:pland
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain lokasjon:Poststed ;
+      rdfs:label "land"^^xsd:string ;
+      rdfs:range lokasjon:Land .
+
+lokasjon:pnavn
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain lokasjon:Poststed ;
+      rdfs:label "pnavn"^^xsd:string ;
+      rdfs:range xsd:string .
+
+lokasjon:postnummer
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain lokasjon:Poststed ;
+      rdfs:label "postnummer"^^xsd:string ;
+      rdfs:range xsd:string .
+
+lokasjon:poststed
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain lokasjon:Adresse ;
+      rdfs:label "poststed"^^xsd:string ;
+      rdfs:range lokasjon:Poststed .
+
+lokasjon:utenlandskPoststed
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain lokasjon:Poststed ;
+      rdfs:label "utenlandsk poststed"^^xsd:string ;
+      rdfs:range xsd:string .
+      

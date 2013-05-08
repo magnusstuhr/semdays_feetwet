@@ -1,0 +1,58 @@
+package code;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+
+public class CashRegister {
+
+	private int total;
+	private HashMap<String, Integer> shoppingCart;
+	private HashMap<String, Integer> productMap;
+	private ArrayList<Integer> discountList;
+
+	public CashRegister() {
+		productMap = new HashMap<String, Integer>();
+		productMap.put("Socks", 10);
+		productMap.put("Pants", 100);
+		shoppingCart = new HashMap<String, Integer>();
+	}
+
+	public void scan(String productType) {
+		if (shoppingCart.containsKey(productType)) {
+			shoppingCart.put(productType, shoppingCart.get(productType)+1);
+		}
+		else {
+			shoppingCart.put(productType, 1);
+		}
+		total+= productMap.get(productType);
+		checkForDiscount();
+	}
+
+	public Object getTotal() {
+		return total;
+	}
+
+	public void checkForDiscount() {
+		if (shoppingCart.containsKey("Socks")) {
+			if (shoppingCart.get("Socks") == 3) {
+				discountList.add(total-productMap.get("Socks")/2);
+			}
+		}
+		if (shoppingCart.containsKey("Pants")) {
+			if (shoppingCart.get("Pants") > 0) {
+				if (shoppingCart.containsKey("Socks")) {
+					shoppingCart.put("Socks", shoppingCart.get("Socks")*shoppingCart.get("Pants"));
+				} 
+				else {
+					shoppingCart.put("Socks", shoppingCart.get("Pants"));
+				}
+			}
+
+			discountList.add(total-productMap.get("Socks"));
+		}
+
+		Collections.sort(discountList);
+		total = discountList.get(0);
+	}
+}

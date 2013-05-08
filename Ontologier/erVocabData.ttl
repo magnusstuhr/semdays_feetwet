@@ -1,0 +1,448 @@
+##At graph <http://data.computas.com/graph/voc/er_organisasjon>
+
+@prefix :        <http://data.computas.com/informasjonsmodell/organisasjon/> .
+@prefix infomodell:  <http://data.computas.com/informasjonsmodell/infomodell/> .
+@prefix lokasjon:  <http://data.computas.com/informasjonsmodell/lokasjon/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix virksomhet:  <http://data.computas.com/informasjonsmodell/virksomhet> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix nace: <http://data.computas.com/informasjonsmodell/nace/> .
+
+lokasjon:Adresse
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality 1 ;
+                owl:onProperty lokasjon:poststed
+              ] ;
+       dc:subject <http://opendata.computas.no/dict/page/Br%C3%B8nn%C3%B8ysundregistrene/Begrep/Adresse/4967> . 
+       
+       
+:AKKO
+      rdf:type :Enhetsstatus ;
+      rdfs:comment "meldt akkord i Foretaksregisteret" ;
+      rdfs:label "AKKO"^^xsd:string .
+
+:ANS  rdf:type :Enhetskode ;
+      rdfs:comment "Ansvarlig selskap solidarisk ansvar" ;
+      rdfs:label "ANS"^^xsd:string .
+
+:AS   rdf:type :Enhetskode ;
+      rdfs:comment "Aksjeselskap" ;
+      rdfs:label "AS"^^xsd:string .
+
+:ASA  rdf:type :Enhetskode ;
+      rdfs:comment "Allmenn aksjeselskap" ;
+      rdfs:label "ASA"^^xsd:string .
+
+:AntAnsattePåDato
+      rdf:type owl:Class ;
+      rdfs:label "Ant ansatte"^^xsd:string .
+
+:BBL  rdf:type :Enhetskode ;
+      rdfs:comment "Boligbyggelag" ;
+      rdfs:label "BBL"^^xsd:string .
+
+:BOBE
+      rdf:type :Rolletype ;
+      rdfs:label "Bostyrer" .
+
+:BRL  rdf:type :Enhetskode ;
+      rdfs:comment "Borettslag" ;
+      rdfs:label "BRL"^^xsd:string .
+
+:DA   rdf:type :Enhetskode ;
+      rdfs:comment "Ansvarlig selskap delt ansvar" ;
+      rdfs:label "DA"^^xsd:string .
+
+:DAGL
+      rdf:type :Rolletype ;
+      rdfs:label "Daglig leder" .
+
+:ENK  rdf:type :Enhetskode ;
+      rdfs:comment "Enkeltpersonforetak" ;
+      rdfs:label "ENK"^^xsd:string .
+
+:Enhet
+      rdf:type owl:Class ;
+      dc:subject <http://opendata.computas.no/dict/guid/Brønnøysundregistrene/Begrep/Enhet/4974> .
+
+:Enhetskode
+      rdf:type owl:Class ;
+      dc:subject <http://opendata.computas.no/dict/guid/Brønnøysundregistrene/Begrep/Sektorkode/4933> .
+
+:Enhetsstatus
+      rdf:type owl:Class ;
+      rdfs:label "Enhetsstatus"^^xsd:string .
+
+:FFØR
+      rdf:type :Rolletype ;
+      rdfs:label "Forretningsfører" .
+
+:FLI  rdf:type :Enhetskode ;
+      rdfs:comment "Forening/lag/innretning" ;
+      rdfs:label "FLI"^^xsd:string .
+
+:INNH
+      rdf:type :Rolletype ;
+      rdfs:label "Innehaver" .
+
+:K    rdf:type :Kjønn ;
+      rdfs:label "K"^^xsd:string .
+
+:KONK
+      rdf:type :Enhetsstatus ;
+      rdfs:comment "åpnet konkurs" ;
+      rdfs:label "KONK"^^xsd:string .
+
+:KONT
+      rdf:type :Rolletype ;
+      rdfs:label "Kontaktperson" .
+
+:KS   rdf:type :Enhetskode ;
+      rdfs:comment "Kommandittselskap" ;
+      rdfs:label "KS"^^xsd:string .
+
+:Kjønn
+      rdf:type owl:Class ;
+      rdfs:label "Kjønn"^^xsd:string ;
+      owl:oneOf (:K :M) .
+
+:LEDE
+      rdf:type :Rolletype ;
+      rdfs:label "Styrets leder" .
+
+:M    rdf:type :Kjønn ;
+      rdfs:label "M"^^xsd:string .
+
+:MEDL
+      rdf:type :Rolletype ;
+      rdfs:label "Styremedlem" .
+
+:NEST
+      rdf:type :Rolletype ;
+      rdfs:label "Nestleder" .
+
+:OBS  rdf:type :Rolletype ;
+      rdfs:label "Observatør" .
+
+:OK   rdf:type :Enhetsstatus ;
+      rdfs:comment "ok" ;
+      rdfs:label "OK"^^xsd:string .
+
+:OPPL
+      rdf:type :Enhetsstatus ;
+      rdfs:comment "oppløst" ;
+      rdfs:label "OPPL"^^xsd:string .
+
+:Person
+      rdf:type owl:Class ;
+      dc:subject <http://opendata.computas.no/dict/page/Br%C3%B8nn%C3%B8ysundregistrene/Begrep/Person/4926> .
+
+:Personnavn
+      rdf:type owl:Class ;
+      rdfs:label "Personnavn"^^xsd:string ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality 1 ;
+                owl:onProperty :fornavn
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality 1 ;
+                owl:onProperty :mellomnavn
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality 1 ;
+                owl:onProperty :etternavn
+              ] .
+
+:Personstatus
+      rdf:type owl:Class ;
+      rdfs:label "Personstatus"^^xsd:string .
+
+:REGN
+      rdf:type :Rolletype ;
+      rdfs:label "Regnskapsfører" .
+
+:REVI
+      rdf:type :Rolletype ;
+      rdfs:label "Revisor" .
+
+:Rolle
+      rdf:type owl:Class ;
+      rdfs:label "Rolle"^^xsd:string ;
+      dc:subject <http://opendata.computas.no/dict/guid/Brønnøysundregistrene/Begrep/Rolle/5050> .
+
+:Rollestatus
+      rdf:type owl:Class ;
+      rdfs:label "Rollestatus"^^xsd:string .
+
+:Rolletype
+      rdf:type owl:Class ;
+      dc:subject <http://opendata.computas.no/dict/guid/Brønnøysundregistrene/Begrep/Rolletype/4919> .
+
+:TVOP
+      rdf:type :Enhetsstatus ;
+      rdfs:comment "tvangsoppløst" ;
+      rdfs:label "TVOP"^^xsd:string .
+
+:USL  rdf:type :Enhetsstatus ;
+      rdfs:comment "under sletting" ;
+      rdfs:label "USL"^^xsd:string .
+
+:VARA
+      rdf:type :Rolletype ;
+      rdfs:label "Varamedlem" .
+
+:adresse
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:label "adresse"^^xsd:string ;
+      rdfs:range lokasjon:Adresse .
+
+:annulertTilgang
+      rdf:type :Personstatus ;
+      rdfs:label "annulert tilgang"^^xsd:string .
+
+:antAnsatte
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :AntAnsattePåDato ;
+      rdfs:label "ant ansatte"^^xsd:string ;
+      rdfs:range xsd:integer .
+
+:antAnsattePåDato
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet;
+      rdfs:label "ant ansatte på dato"^^xsd:string ;
+      rdfs:range :AntAnsattePåDato .
+
+:beskrivelse
+      rdf:type owl:DatatypeProperty ;
+     # rdfs:domain :Personstatus , :Rollestatus , :Rolletype , :Enhetsstatus , :Enhetskode ;
+      rdfs:label "beskrivelse"^^xsd:string ;
+      rdfs:range xsd:string .
+
+:dato
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Rolletype ;
+      rdfs:label "dato"^^xsd:string ;
+      rdfs:range xsd:date .
+
+:død  rdf:type :Personstatus ;
+      rdfs:label "død"^^xsd:string .
+
+:egenfratreden
+      rdf:type :Rollestatus ;
+      rdfs:label "egenfratreden"^^xsd:string .
+
+:eierforhold
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet  ;
+      rdfs:label "eierforhold"^^xsd:string ;
+      rdfs:range :Enhet .
+
+:enhet
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Rolle ;
+      rdfs:label "enhet"^^xsd:string ;
+      rdfs:range :Enhet .
+
+:enhetsstatus
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet  ;
+      rdfs:label "enhetsstatus"^^xsd:string ;
+      rdfs:range :Enhetsstatus .
+
+:epost
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Enhet ;
+      rdfs:range xsd:string .
+
+:etternavn
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Personnavn ;
+      rdfs:label "etternavn"^^xsd:string ;
+      rdfs:range xsd:string .
+
+:foretaksnavn
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Enhet ;
+      rdfs:label "foretaksnavn"^^xsd:string ;
+      rdfs:range xsd:string .
+
+:fornavn
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Personnavn ;
+      rdfs:label "fornavn"^^xsd:string ;
+      rdfs:range xsd:string .
+
+:forretningsadresse
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet  ;
+      rdfs:range lokasjon:Adresse .
+
+:fulltnavn
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Personnavn ;
+      rdfs:label "fulltnavn"^^xsd:string ;
+      rdfs:range xsd:string .
+
+:fødselsdato
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:label "fødselsdato"^^xsd:string ;
+      rdfs:range xsd:date .
+
+:gyldigFraDato
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :AntAnsattePåDato ;
+      rdfs:label "gyldig fra dato"^^xsd:string ;
+      rdfs:range xsd:date .
+
+:hjemmeside
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Enhet  ;
+      rdfs:range xsd:string .
+
+:kjønn
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:label "kjønn"^^xsd:string ;
+      rdfs:range :Kjønn .
+
+:kode
+      rdf:type owl:DatatypeProperty ;
+      rdfs:label "kode"^^xsd:string ;
+      rdfs:range xsd:string .
+
+:kommune
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet  ;
+      rdfs:range lokasjon:Kommune .
+
+:konkurskarantene
+      rdf:type :Rollestatus ;
+      rdfs:label "konkurskarantene"^^xsd:string .
+
+:lever
+      rdf:type :Personstatus ;
+      rdfs:label "lever"^^xsd:string .
+
+:mellomnavn
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Personnavn ;
+      rdfs:label "mellomnavn"^^xsd:string ;
+      rdfs:range xsd:string .
+
+:nacekode
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet  ;
+      rdfs:range nace:Nacekode  .
+
+:navn
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Person , :Enhet ;
+      rdfs:label "navn"^^xsd:string ;
+      rdfs:range :Personnavn .
+
+:organisasjonsform
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet;
+      rdfs:label "organisasjonsform"^^xsd:string ;
+      rdfs:range :Enhetskode .
+
+:organisasjonsnummer
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Enhet  ;
+      rdfs:label "organisasjonsnummer"^^xsd:string ;
+      rdfs:range xsd:string ;
+      dc:subject <http://opendata.computas.no/dict/guid/Br%C3%B8nn%C3%B8ysundregistrene/Begrep/Organisasjonsnummer/5034> .
+
+:personstatus
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:label "personstatus"^^xsd:string ;
+      rdfs:range :Personstatus .
+
+:postadresse
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet ;
+      rdfs:range lokasjon:Adresse .
+
+:rettighetstap
+      rdf:type :Rollestatus ;
+      rdfs:label "rettighetstap"^^xsd:string .
+
+:rolle
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet ;
+      rdfs:label "rolle"^^xsd:string ;
+      rdfs:range :Rolle .
+
+:rolleinnehaver
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Rolle ;
+      rdfs:label "agent"^^xsd:string ;
+      rdfs:range
+              [ rdf:type owl:Class ;
+                owl:unionOf (:Person :Enhet)
+              ] .
+
+:rollestatus
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Rolle ;
+      rdfs:label "rollestatus"^^xsd:string ;
+      rdfs:range :Rollestatus .
+
+:rolletype
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Rolle ;
+      rdfs:label "rolletype"^^xsd:string ;
+      rdfs:range :Rolletype .
+
+:status
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Personstatus , :Rollestatus ;
+      rdfs:label "status"^^xsd:string ;
+      rdfs:range xsd:string .
+      
+:stiftelsesdato
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Enhet;
+      rdfs:label "stiftelsesdato"^^xsd:string ;
+      rdfs:range xsd:date .
+
+:telefonnummer
+      rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Enhet ;
+      rdfs:range xsd:string .
+
+:ugyldig
+      rdf:type :Personstatus ;
+      rdfs:label "ugyldig"^^xsd:string .
+
+:umyndiggjort
+      rdf:type :Personstatus ;
+      rdfs:label "umyndiggjort"^^xsd:string .
+
+:underenhet
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Enhet  ;
+      rdfs:label "underenhet"^^xsd:string ;
+      rdfs:range :Enhet .
+
+:utenlands
+      rdf:type :Personstatus ;
+      rdfs:label "utenlands"^^xsd:string .
+
+:verv
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain :Person ;
+      rdfs:label "verv"^^xsd:string ;
+      rdfs:range :Rolle .
+           

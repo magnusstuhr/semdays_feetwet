@@ -1,0 +1,25 @@
+import java.CashRegister;
+import java.Socks;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class CashRegisterTest {
+	
+	private CashRegister cashRegister = new CashRegister();
+	private Socks socks;
+	@Before
+	public void setUp() {
+		socks = new Socks();
+	}
+	@Test
+	public void testShouldScanThreeSocksWithDiscount() {
+		cashRegister.scan(socks);
+		cashRegister.scan(socks);
+		cashRegister.scan(socks);
+		assertEquals(25, cashRegister.getTotal());
+		
+	}
+
+}

@@ -1,0 +1,42 @@
+##At graph <http://data.computas.com/graph/voc/ssb_nace>
+
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix nace: <http://data.computas.com/informasjonsmodell/nace/> .
+
+############################### 
+#### Nace #####################
+############################### 
+
+nace:Nacekode rdf:type owl:Class ;
+	dc:subject <http://opendata.computas.no/dict/guid/Brønnøysundregistrene/Begrep/Næringskode/4960> .
+
+nace:nivå rdf:type owl:DatatypeProperty ;
+      rdfs:domain nace:Nacekode .		
+      
+nace:beskrivelse rdf:type owl:DatatypeProperty ;
+      rdfs:domain nace:Nacekode .
+      			
+nace:ekskluderer rdf:type owl:DatatypeProperty ;
+      rdfs:domain nace:Nacekode .
+      			
+nace:inkulderer rdf:type owl:DatatypeProperty ;
+      rdfs:domain nace:Nacekode .	
+      		
+nace:inkulderer_også rdf:type owl:DatatypeProperty ;
+      rdfs:domain nace:Nacekode .
+      			
+nace:tittel rdf:type owl:DatatypeProperty ;
+      rdfs:domain nace:Nacekode .	
+      	
+nace:tittel_kort rdf:type owl:DatatypeProperty ;
+      rdfs:domain nace:Nacekode .
+      			
+nace:tittel_med rdf:type owl:DatatypeProperty ;
+      rdfs:domain nace:Nacekode .		
+

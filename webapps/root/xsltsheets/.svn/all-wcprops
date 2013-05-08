@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SvnRepository/!svn/ver/60492/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets
+END
+result-osm-wide.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-wide.xsl
+END
+result-osm-enheter.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-enheter.xsl
+END
+result-osm-bolagsverket-person.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-bolagsverket-person.xsl
+END
+result-osm-kommuner.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-kommuner.xsl
+END
+result-osm-enhet-roller.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-enhet-roller.xsl
+END
+result-osm-trimmed.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-trimmed.xsl
+END
+result-osm.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/SvnRepository/!svn/ver/60492/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm.xsl
+END
+result-osm-person-roller.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-person-roller.xsl
+END
+result-osm-enhet.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-enhet.xsl
+END
+result-osm-sgvizler.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-sgvizler.xsl
+END
+result-trimmed.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-trimmed.xsl
+END
+result-osm-person.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/SvnRepository/!svn/ver/60492/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-person.xsl
+END
+result-osm-nace.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-nace.xsl
+END
+result.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result.xsl
+END
+result-osm-wide2.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-wide2.xsl
+END
+xml-to-html.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/xml-to-html.xsl
+END
+result-osm-enhet-regnskap.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-enhet-regnskap.xsl
+END
+result-osm-bolager.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-bolager.xsl
+END
+linked-data-api.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/linked-data-api.xsl
+END
+ashtml.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/ashtml.xsl
+END
+result-osm-bolag-roller.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-bolag-roller.xsl
+END
+result-osm-bolagsverket-kommuner.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-bolagsverket-kommuner.xsl
+END
+csv.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/csv.xsl
+END
+result-osm-bolag.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-bolag.xsl
+END
+result-osm-postnr.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/xsltsheets/result-osm-postnr.xsl
+END

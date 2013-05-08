@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc
+END
+webdefault.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/webdefault.xml
+END
+jetty-logging.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-logging.xml
+END
+jetty-debug.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-debug.xml
+END
+jetty-ipaccess.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-ipaccess.xml
+END
+jetty-xinetd.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-xinetd.xml
+END
+jetty-stats.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-stats.xml
+END
+jetty-jmx.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-jmx.xml
+END
+jetty-policy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-policy.xml
+END
+realm.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/realm.properties
+END
+jetty-ssl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-ssl.xml
+END
+jetty.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty.xml
+END
+jetty-fileserver.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-fileserver.xml
+END
+jetty-bio-ssl.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-bio-ssl.xml
+END
+jetty-bio.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-bio.xml
+END
+keystore
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/keystore
+END
+jetty-ajp.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-ajp.xml
+END
+jetty-rewrite.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-rewrite.xml
+END
+jetty-proxy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-proxy.xml
+END
+jdbcRealm.properties
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jdbcRealm.properties
+END
+jetty-plus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/etc/jetty-plus.xml
+END

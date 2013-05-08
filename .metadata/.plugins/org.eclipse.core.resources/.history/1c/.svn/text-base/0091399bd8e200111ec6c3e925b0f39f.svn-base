@@ -1,0 +1,39 @@
+package test;
+
+import static org.junit.Assert.*;
+
+
+import org.junit.Before;
+import org.junit.Test;
+
+import code.CashRegister;
+import code.Socks;
+
+
+public class CashRegisterTest {
+	
+	private CashRegister cashRegister;
+	private Socks socks;
+	
+	@Before
+	public void setUp() {
+		socks = new Socks();
+		cashRegister = new CashRegister();
+	}
+	@Test
+	public void testShouldScanThreeSocksWithDiscount() {
+		cashRegister.scan(socks);
+		cashRegister.scan(socks);
+		cashRegister.scan(socks);
+		assertEquals(25, cashRegister.getTotal());
+	}
+	@Test
+	public void testShouldScanTwoSocksOnePantsAndOneSock() {
+		cashRegister.scan(socks);
+		cashRegister.scan(socks);
+		cashRegister.scan(socks);
+		assertEquals(125, cashRegister.getTotal());
+		
+	}
+
+}

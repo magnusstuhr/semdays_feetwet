@@ -1,0 +1,44 @@
+package test;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import code.CashRegister;
+
+
+public class CashRegisterTest {
+	
+	private CashRegister cashRegister;
+	
+	@Before
+	public void setUp() {
+		cashRegister = new CashRegister();
+	}
+	@Test
+	public void testShouldScanThreeSocksWithDiscount() {
+		cashRegister.scan("Socks");
+		cashRegister.scan("Socks");
+		cashRegister.scan("Socks");
+		assertEquals(25, cashRegister.getTotal());
+	}
+	@Test
+	public void testShouldScanTwoSocksOnePantsAndOneSock() {
+		cashRegister.scan("Socks");
+		cashRegister.scan("Socks");
+		cashRegister.scan("Pants");
+		cashRegister.scan("Socks");
+		assertEquals(120, cashRegister.getTotal());
+		
+	}
+	@Test
+	public void testShouldScanOneSocksOnePantsAndOneSocks() {
+		cashRegister.scan("Socks");
+		cashRegister.scan("Pants");
+		cashRegister.scan("Socks");
+		assertEquals(110, cashRegister.getTotal());
+		
+	}
+
+}

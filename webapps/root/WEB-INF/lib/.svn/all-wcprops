@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib
+END
+httpclient-4.1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/httpclient-4.1.2.jar
+END
+jackson-jaxrs-1.7.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jackson-jaxrs-1.7.1.jar
+END
+jersey-core-1.6-ea04.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jersey-core-1.6-ea04.jar
+END
+jena-iri-0.9.0-incubating.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jena-iri-0.9.0-incubating.jar
+END
+stax-api-1.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/stax-api-1.0.1.jar
+END
+jena-arq-2.9.0-incubating.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jena-arq-2.9.0-incubating.jar
+END
+commons-codec-1.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/commons-codec-1.5.jar
+END
+httpcore-4.1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/httpcore-4.1.3.jar
+END
+jackson-mapper-asl-1.7.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jackson-mapper-asl-1.7.1.jar
+END
+slf4j-api-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/slf4j-api-1.6.1.jar
+END
+servlet-api-2.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/servlet-api-2.5.jar
+END
+jettison-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jettison-1.2.jar
+END
+jackson-core-asl-1.7.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jackson-core-asl-1.7.1.jar
+END
+jersey-server-1.6-ea04.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jersey-server-1.6-ea04.jar
+END
+activation-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/activation-1.1.jar
+END
+junit-4.8.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/junit-4.8.2.jar
+END
+log4j-1.2.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/log4j-1.2.16.jar
+END
+slf4j-log4j12-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/slf4j-log4j12-1.6.1.jar
+END
+xml-apis-1.4.01.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/xml-apis-1.4.01.jar
+END
+lda-1.2.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/lda-1.2.11.jar
+END
+asm-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/asm-3.1.jar
+END
+stax-api-1.0-2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/stax-api-1.0-2.jar
+END
+jaxb-impl-2.2.3-1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jaxb-impl-2.2.3-1.jar
+END
+icu4j-3.4.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/icu4j-3.4.4.jar
+END
+jena-larq-1.0.0-incubating-SNAPSHOT.jar
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jena-larq-1.0.0-incubating-SNAPSHOT.jar
+END
+jena-core-2.7.0-incubating.jar
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jena-core-2.7.0-incubating.jar
+END
+xercesImpl-2.10.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/xercesImpl-2.10.0.jar
+END
+jaxb-api-2.2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jaxb-api-2.2.2.jar
+END
+json-rdf-1.2.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/json-rdf-1.2.11.jar
+END
+jersey-json-1.6-ea04.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jersey-json-1.6-ea04.jar
+END
+jackson-xc-1.7.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jackson-xc-1.7.1.jar
+END
+lucene-core-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/lucene-core-3.5.0.jar
+END
+jena-tdb-0.9.0-incubating.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/SvnRepository/!svn/ver/60449/usr/mst/SemWebWorkshopElda/webapps/root/WEB-INF/lib/jena-tdb-0.9.0-incubating.jar
+END
