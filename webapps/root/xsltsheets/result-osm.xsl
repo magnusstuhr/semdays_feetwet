@@ -68,7 +68,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	<link rel="stylesheet" href="{$_resourceRoot}css/smoothness/jquery-ui.css" type="text/css" />
 	<link rel="stylesheet" href="{$_resourceRoot}css/result.css" type="text/css" />
 	<xsl:comment>
-		<xsl:text>[if IE]&gt;</xsl:text>
+		<xsl:text>[if lt IE 9]&gt;</xsl:text>
 		<xsl:text>&lt;link rel="stylesheet" href="</xsl:text><xsl:value-of select='$_resourceRoot'/><xsl:text>css/ie.css" type="text/css">&lt;/link></xsl:text>
 		<xsl:text>&lt;![endif]</xsl:text>
 	</xsl:comment>
@@ -83,7 +83,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<xsl:apply-templates select="." mode="showMap" />
 	</xsl:variable>
 	<xsl:comment>
-		<xsl:text>[if IE]&gt;</xsl:text>
+		<xsl:text>[if lt IE 9]&gt;</xsl:text>
 		<xsl:text>&lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">&lt;/script></xsl:text>
 		<xsl:text>&lt;![endif]</xsl:text>
 	</xsl:comment>
@@ -952,7 +952,7 @@ $prefLabel, $altLabel, $title and $name variables.
 				<xsl:for-each select="items/item">
 					<li>
 						<a href="#{generate-id(.)}" title="hopp til denne ressursen på siden">
-							<xsl:value-of select="name" />
+							<xsl:apply-templates select="." mode="name" />
 						</a>
 					</li>
 				</xsl:for-each>
@@ -1845,7 +1845,7 @@ $prefLabel, $altLabel, $title and $name variables.
 <xsl:template match="/result/primaryTopic" mode="content" priority="10">
 	<header>
 		<p id="openSearch">Vis søkeskjema</p>
-		<h1><xsl:value-of select="name" /></h1>
+		<h1><xsl:apply-templates select="." mode="name" /></h1>
 		<p class="id"><a href="{@href}"><xsl:value-of select="@href" /></a></p>
 	</header>
 	<xsl:apply-templates select="/result" mode="search" />
@@ -1943,7 +1943,9 @@ $prefLabel, $altLabel, $title and $name variables.
 						<xsl:with-param name="content">
 							<xsl:choose>
 								<xsl:when test="self::item/parent::items/parent::result or starts-with(@href, ancestor::*[@href][1]/@href)">
-									<xsl:value-of select="name" />
+									<xsl:call-template name="lastURIpart">
+										<xsl:with-param name="uri" select="@href" />
+									</xsl:call-template>
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="@href" />
@@ -2700,7 +2702,7 @@ $prefLabel, $altLabel, $title and $name variables.
 				</xsl:call-template>
 				<table>
 					<colgroup>
-						<col width="21%" />
+						<col width="25%" />
 						<col width="70%" />
 					</colgroup>
 					<xsl:for-each select="(items/item/* | primaryTopic/*)[generate-id(key('properties', name(.))[1]) = generate-id(.)]">

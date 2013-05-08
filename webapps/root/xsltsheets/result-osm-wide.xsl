@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="{$_resourceRoot}css/result_wide.css"
 			type="text/css" />
 		<xsl:comment>
-			<xsl:text>[if IE]&gt;</xsl:text>
+			<xsl:text>[if lt IE 9]&gt;</xsl:text>
 			<xsl:text>&lt;link rel="stylesheet" href="</xsl:text>
 			<xsl:value-of select='$_resourceRoot' />
 			<xsl:text>css/ie.css" type="text/css">&lt;/link></xsl:text>
