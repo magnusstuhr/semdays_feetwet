@@ -39,7 +39,7 @@ spec:apiPerson a api:API
     ; api:contentNegotiation api:parameterBased
     ; api:sparqlEndpoint <http://localhost:3030/dataset/query>
     ; rdfs:comment "An API for persons."
-    ; api:endpoint spec:person, spec:persons, spec:projects, spec:project
+    ; api:endpoint spec:person, spec:persons, spec:projects, spec:project, spec:skill, spec:skills
            
     # normally constructed URIs (for views, formatters, metadata, etc) are based
     # on the context root of the request. If api:base is set, then it is used as
@@ -108,6 +108,27 @@ spec:apiPerson a api:API
 ####################################################################################    
 ############################# PERSONER ###############################################  
 
+spec:viewerNone a api:Viewer
+    ; api:name "Display only URI-names"
+    .
+
+
+spec:personWithSkillsViewer a api:Viewer
+    ; api:name "Display skills"
+    ; api:properties "firstName"
+    ; api:properties "lastName"
+    ; api:properties "hasProfiency.characterizes.skillType"
+    ; api:properties "hasProfiency.skillLevel"
+    ; api:properties "hasAvailability.mustFitWith.*"
+    .
+
+spec:nameViewer a api:Viewer
+    ; api:name "Display only names"
+    ; api:properties "firstName"
+    ; api:properties "lastName"
+    .
+
+
 ###################### En paginert liste over alle personer ############################
 
 spec:persons
@@ -121,25 +142,15 @@ spec:persons
      [ a api:XsltFormatter
 	    ; api:name 'html'
       	; api:stylesheet 'xsltsheets/result-osm.xsl'
-      	; extras:metadataOptions "formats,versions"
+      	; extras:metadataOptions "bindings,formats,versions,execution"
       	; api:mimeType 'text/html; charset=utf-8'
 	 ]
-	; api:viewer api:describeViewer
+	; api:viewer spec:personWithSkillsViewer
     ; api:viewer spec:nameViewer
 	; api:defaultViewer spec:nameViewer
 	.
 
 
-spec:viewerNone a api:Viewer
-    ; api:name "Display only URI-names"
-    .
-
-
-spec:nameViewer a api:Viewer
-    ; api:name "Display only names"
-    ; api:property :firstName
-    ; api:property :lastName
-    .
 
 ###################### ItemEndpoint for a specific PERSON ########################
 
@@ -158,12 +169,25 @@ spec:person
       		       api:name "person";
                        api:value "http://semanticdays.org/workshop/person/{id}";
 		       api:type rdfs:Resource;]
-	#; api:viewer api:describeViewer 
-	#; api:viewer spec:basisViewer
-	#; api:viewer spec:personViewer;
-    #; api:defaultViewer spec:basisViewer
+	; api:viewer api:describeViewer
+	; api:viewer spec:personWithSkillsViewer
+    ; api:defaultViewer spec:personWithSkillsViewer
 	.
 
+
+############################# PROJECTS ###############################################
+
+spec:projectDetailsViewer a api:Viewer
+    ; api:name "Display details"
+    ; api:properties "projectTitle"
+    ; api:properties "needs.skillType"
+    ; api:properties "lastsFor.*"
+    .
+
+spec:projectNameViewer a api:Viewer
+    ; api:name "Display only names"
+    ; api:properties "projectTitle"
+    .
 
 ###################### Projects list ############################
 
@@ -178,12 +202,12 @@ spec:projects
      [ a api:XsltFormatter
 	    ; api:name 'html'
       	; api:stylesheet 'xsltsheets/result-osm.xsl'
-      	; extras:metadataOptions "formats,versions"
+        ; extras:metadataOptions "bindings,formats,versions,execution"
       	; api:mimeType 'text/html; charset=utf-8'
 	 ]
-	; api:viewer api:describeViewer
-    ; api:viewer spec:viewerNone
-	; api:defaultViewer spec:viewerNone
+	; api:viewer spec:projectDetailsViewer
+    ; api:viewer spec:projectNameViewer
+	; api:defaultViewer spec:projectNameViewer
 	.
 
 
@@ -201,14 +225,50 @@ spec:project
       	    ; api:mimeType 'text/html'
 	    ]
       ; api:variable [
-      		       api:name "person";
-                       api:value "http://semanticdays.org/workshop/person/{id}";
+      		       api:name "project";
+                       api:value "http://semanticdays.org/workshop/project/{id}";
 		       api:type rdfs:Resource;]
-	#; api:viewer api:describeViewer
-	#; api:viewer spec:basisViewer
-    #; api:defaultViewer spec:basisViewer
+	; api:viewer api:describeViewer
+	; api:viewer spec:projectDetailsViewer
+    ; api:defaultViewer spec:projectDetailsViewer
 	.
 
+
+############################# SKILLS ###############################################
+
+
+###################### Skills list ############################
+
+spec:skills
+	a api:ListEndpoint
+	; rdfs:comment "Skills from the Semantic Web workshop."
+	; api:uriTemplate "skill"
+	; api:selector [
+   	  				api:filter	"type=Skill"
+		           ]
+	; api:formatter
+     [ a api:XsltFormatter
+	    ; api:name 'html'
+      	; api:stylesheet 'xsltsheets/result-osm.xsl'
+      	; extras:metadataOptions "bindings,formats,versions,execution"
+      	; api:mimeType 'text/html; charset=utf-8'
+	 ]
+.
+
+###################### ItemEndpoint for a specific skill  ########################
+
+spec:skill
+      a api:ItemEndpoint
+      ; api:uriTemplate "skill/{id}"
+      ; api:itemTemplate "http://semanticdays.org/workshop/skill/{id}"
+      ; api:formatter
+      	  [ a api:XsltFormatter
+	    ; api:name 'html'
+		    ; api:stylesheet 'xsltsheets/result-osm-person.xsl'
+      	    ; extras:metadataOptions "bindings,formats,versions,execution"
+      	    ; api:mimeType 'text/html'
+	    ]
+.
 
 
 ####################################################################################################
@@ -228,6 +288,26 @@ voc:Person api:label "Person" .
 voc:Project api:label "Project" .
 voc:firstName api:label "firstName" .
 voc:lastName api:label "lastName" .
+voc:hasAvailability api:label "hasAvailability" .
+voc:contributesTo api:label "contributesTo" .
+voc:hasProfiency api:label "hasProfiency" .
+voc:characterizes api:label "characterizes" .
+voc:Skill api:label "Skill" .
+voc:enables api:label "enables" .
+voc:needs api:label "needs" .
+voc:Profiency api:label "Profiency" .
+voc:skillLevel api:label "skillLevel" .
+voc:projectTitle api:label "projectTitle" .
+voc:Contribution api:label "Contribution" .
+voc:Availability api:label "Availability" .
+voc:durationFrom api:label "durationFrom" .
+voc:Period api:label "Period" .
+voc:durationTo api:label "durationTo" .
+voc:lastsFor api:label "lastsFor" .
+voc:setsFrameFor api:label "setsFrameFor" .
+voc:mustFitWith api:label "mustFitWith" .
+voc:skillType api:label "skillType" .
+voc:dependsUpon api:label "dependsUpon" .
 
 
 ################## RDF/s ###########################

@@ -1,0 +1,15 @@
+#Denne spørringen skal brukes for å finne personer som kan fylle et prosjekt
+#under konstruksjon.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial/>
+
+SELECT ?project ?person
+WHERE {
+    ?project rdf:type :Project ;
+             :needs ?skill .
+
+    ?person :hasProfiency [ :characterizes ?skill ] .
+    #TODO availability
+
+}
