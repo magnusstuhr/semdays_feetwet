@@ -161,8 +161,8 @@ spec:person
       ; api:formatter 
       	  [ a api:XsltFormatter
 	    ; api:name 'html'
-		    ; api:stylesheet 'xsltsheets/result-osm-person.xsl' 
-      	    ; extras:metadataOptions "bindings,formats,versions,execution"
+		    ; api:stylesheet 'xsltsheets/result-osm.xsl'
+      	    ; extras:metadataOptions "bindings,formats,versions"
       	    ; api:mimeType 'text/html'
 	    ]              
       ; api:variable [ 
@@ -220,8 +220,8 @@ spec:project
       ; api:formatter
       	  [ a api:XsltFormatter
 	    ; api:name 'html'
-		    ; api:stylesheet 'xsltsheets/result-osm-person.xsl'
-      	    ; extras:metadataOptions "bindings,formats,versions,execution"
+		    ; api:stylesheet 'xsltsheets/result-osm-project.xsl'
+      	    ; extras:metadataOptions "bindings,formats,versions"
       	    ; api:mimeType 'text/html'
 	    ]
       ; api:variable [
@@ -264,8 +264,8 @@ spec:skill
       ; api:formatter
       	  [ a api:XsltFormatter
 	    ; api:name 'html'
-		    ; api:stylesheet 'xsltsheets/result-osm-person.xsl'
-      	    ; extras:metadataOptions "bindings,formats,versions,execution"
+		    ; api:stylesheet 'xsltsheets/result-osm.xsl'
+      	    ; extras:metadataOptions "bindings,formats,versions"
       	    ; api:mimeType 'text/html'
 	    ]
 .
