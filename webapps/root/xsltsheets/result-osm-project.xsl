@@ -21,7 +21,7 @@
                 <ul>
                     <li id="agr1">
                         <xsl:variable name="project" select="//item[label='project']/value"/>
-                        <a title="Staff project!" href="http://localhost:3030/dataset/query?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+%3A+%3Chttp%3A%2F%2Fwww.posccaesar.org%2Fwiki%2FPCA%2FSemanticDays2013%2FTutorial%2F%3E%0D%0A%0D%0ASELECT+%3Fproject+%3Fperson%0D%0AWHERE+%7B%0D%0A++++%3C{$project}%3E+rdf%3Atype+%3AProject+%3B%0D%0A+++++++++++++%3Aneeds+%3Fskill+.%0D%0A++++%3Fperson+%3AhasProfiency+[+%3Acharacterizes+%3Fskill+]+.%0D%0A%7D&amp;output=xml&amp;stylesheet=%2Fxml-to-html.xsl">Find persons available for staffing this project</a>
+                        <a title="Staff project!" href="http://localhost:3030/dataset/query?query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+%3A+%3Chttp%3A%2F%2Fwww.posccaesar.org%2Fwiki%2FPCA%2FSemanticDays2013%2FTutorial%23>%0D%0A%0D%0ASELECT+%3Fproject+%3Fperson%0D%0AWHERE+%7B%0D%0A++++%3C{$project}%3E+rdf%3Atype+%3AProject+%3B%0D%0A+++++++++++++%3Aneeds+%3Fskill+.%0D%0A++++%3Fperson+%3AhasProficiency+[+%3Acharacterizes+%3Fskill+]+.%0D%0A%7D&amp;output=xml&amp;stylesheet=%2Fxml-to-html.xsl">Find persons available for staffing this project</a>
                     </li>
                 </ul>
             </section>

@@ -22,7 +22,7 @@
 @prefix extras: <http://www.epimorphics.com/vocabularies/lda#> .
 @prefix ids: <http://education.data.gov.uk/id/school/>.
 @prefix :    <http://semanticdays.org/workshop/> .
-@prefix voc:   <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial/> .
+@prefix voc:   <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 ##########################################################################################################
@@ -117,8 +117,8 @@ spec:personWithSkillsViewer a api:Viewer
     ; api:name "Display skills"
     ; api:properties "firstName"
     ; api:properties "lastName"
-    ; api:properties "hasProfiency.characterizes.skillType"
-    ; api:properties "hasProfiency.skillLevel"
+    ; api:properties "hasProficiency.characterizes.skillType"
+    ; api:properties "hasProficiency.skillLevel"
     ; api:properties "hasAvailability.mustFitWith.*"
     .
 
@@ -290,12 +290,12 @@ voc:firstName api:label "firstName" .
 voc:lastName api:label "lastName" .
 voc:hasAvailability api:label "hasAvailability" .
 voc:contributesTo api:label "contributesTo" .
-voc:hasProfiency api:label "hasProfiency" .
+voc:hasProficiency api:label "hasProficiency" .
 voc:characterizes api:label "characterizes" .
 voc:Skill api:label "Skill" .
 voc:enables api:label "enables" .
 voc:needs api:label "needs" .
-voc:Profiency api:label "Profiency" .
+voc:Proficiency api:label "Proficiency" .
 voc:skillLevel api:label "skillLevel" .
 voc:projectTitle api:label "projectTitle" .
 voc:Contribution api:label "Contribution" .
