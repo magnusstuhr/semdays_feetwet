@@ -1,0 +1,80 @@
+1) PERSON
+
+Find all projects that meets this person's availability:
+
+prefix :        <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+WHERE {
+
+    ?project 
+    :lastsFor[:durationFrom ?durationFrom ;
+              :durationTo ?durationTo].
+
+    <http://semanticdays.org/workshop/person/24>
+            :firstName ?personFirstName ;
+            :lastName ?personLastName ;
+            :hasAvailability ?availability.
+
+?availability :mustFitWith[:durationFrom ?availableFrom ; :durationTo ?availableTo].
+
+Filter(?durationFrom = ?availableFrom && ?durationTo = ?availableTo).
+}
+
+2) PERSON
+
+Find all projects that meets this person's availability and skill:
+
+prefix :        <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+WHERE {
+
+    ?project 
+           :lastsFor 
+               [:durationFrom ?durationFrom ;
+                :durationTo ?durationTo];
+           :needs ?projectSkill .
+
+    <http://semanticdays.org/workshop/person/24> 
+            :hasProficiency [ :characterizes ?personSkill ] ;
+            :firstName ?personFirstName ;
+            :lastName ?personLastName ;
+            :hasAvailability ?availability.
+
+?availability :mustFitWith[:durationFrom ?availableFrom ; :durationTo ?availableTo].
+
+Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo) && (?projectSkill = ?personSkill)).
+}
+
+3) PERSON
+
+Find all projects that meets this person's availability and skill, with a skill level of 3 or higher:
+
+prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+WHERE {
+
+    ?project 
+          :lastsFor 
+               [:durationFrom ?durationFrom ;
+                :durationTo ?durationTo];
+          :needs ?projectSkill .
+
+    <http://semanticdays.org/workshop/person/24>
+          :hasProficiency
+              [ :characterizes ?personSkill ;
+                :skillLevel ?skillLevel ] ;
+          :firstName ?personFirstName ;
+          :lastName ?personLastName ;
+          :hasAvailability ?availability.
+
+?availability 
+           :mustFitWith
+                 [:durationFrom ?availableFrom ; 
+                  :durationTo ?availableTo].
+
+Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo) && (?skillLevel >= "3"^^xsd:long) && ?projectSkill = ?personSkill).
+}

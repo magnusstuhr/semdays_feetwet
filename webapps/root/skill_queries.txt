@@ -1,0 +1,91 @@
+1) SKILL
+
+Find the names of persons with this skill:
+
+prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+
+WHERE {
+
+    ?person :hasProficiency
+                [ :characterizes <http://semanticdays.org/workshop/skill/29>] ;
+            :firstName ?personFirstName ;
+            :lastName ?personLastName .
+}
+
+2) SKILL
+
+Find all projects who require this skill:
+
+prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial/>
+
+SELECT DISTINCT ?projectTitle
+
+WHERE {
+    ?project 
+           :needs <http://semanticdays.org/workshop/skill/29> ;
+           :projectTitle ?projectTitle .
+}
+
+3) SKILL
+
+Find what persons can staff any project requiring this skill, who are also available in the project's time-frame:
+
+prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+WHERE {
+
+    ?project 
+          :lastsFor 
+              [:durationFrom ?durationFrom ;
+               :durationTo ?durationTo];
+          :needs <http://semanticdays.org/workshop/skill/1> .
+
+    ?person 
+          :hasProficiency
+                  [ :characterizes <http://semanticdays.org/workshop/skill/1> ] ;
+          :firstName ?personFirstName ;
+          :lastName ?personLastName ;
+          :hasAvailability ?availability.
+
+?availability 
+          :mustFitWith
+                   [:durationFrom ?availableFrom ; 
+                    :durationTo ?availableTo].
+
+Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo)).
+}
+
+4) SKILL
+
+Find what persons can staff any project requiring this skill, who are also available in the project's time-frame and have a skillLevel of 3 or higher:
+
+prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+prefix xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+WHERE {
+
+    ?project 
+          :lastsFor 
+              [:durationFrom ?durationFrom ;
+               :durationTo ?durationTo];
+          :needs <http://semanticdays.org/workshop/skill/1> .
+
+    ?person 
+          :hasProficiency
+                 [ :characterizes <http://semanticdays.org/workshop/skill/1> ;
+                   :skillLevel ?skillLevel ] ;
+           :firstName ?personFirstName ;
+           :lastName ?personLastName ;
+           :hasAvailability ?availability.
+
+?availability 
+           :mustFitWith
+                  [:durationFrom ?availableFrom ; 
+                   :durationTo ?availableTo].
+
+Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo) && (?skillLevel >= "3"^^xsd:long)).
+}

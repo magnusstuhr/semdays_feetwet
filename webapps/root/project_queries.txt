@@ -1,0 +1,91 @@
+1) PROJECT
+
+Find the names of persons who are available for this project:
+
+prefix :        <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+WHERE {
+
+    <http://semanticdays.org/workshop/project/A>
+          :lastsFor
+             [:durationFrom ?durationFrom ;
+              :durationTo ?durationTo] ;
+          :needs ?projectSkill .
+             
+    ?person 
+          :hasProficiency
+                  [ :characterizes ?personSkill] ;
+          :firstName ?personFirstName ;
+          :lastName ?personLastName ;
+          :hasAvailability ?availability.
+
+?availability 
+          :mustFitWith
+                  [ :durationFrom ?availableFrom ; 
+                    :durationTo ?availableTo].
+
+Filter(?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo).
+}
+
+2) PROJECT
+
+Find the names of persons available in the time-frame of this project possessing the required skill:
+
+prefix :        <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+WHERE {
+
+    <http://semanticdays.org/workshop/project/X> 
+            :lastsFor 
+               [:durationFrom ?durationFrom ;
+           :durationTo ?durationTo];
+           :needs ?projectSkill .
+
+    ?person 
+           :hasProficiency
+                   [ :characterizes ?personSkill ] ;
+           :firstName ?personFirstName ;
+           :lastName ?personLastName ;
+           :hasAvailability ?availability.
+
+?availability 
+           :mustFitWith
+                   [:durationFrom ?availableFrom ; 
+                    :durationTo ?availableTo].
+
+Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo) && (?projectSkill = ?personSkill)).
+}
+
+3) PROJECT
+
+Find the names of persons available in the time-frame of this project with a relevant skill and a skill level of 3 or higher:
+
+prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?personFirstName ?personLastName
+WHERE {
+
+    <http://semanticdays.org/workshop/project/A> 
+          :lastsFor 
+              [:durationFrom ?durationFrom ;
+          :durationTo ?durationTo];
+          :needs ?projectSkill .
+
+    ?person 
+          :hasProficiency
+              [ :characterizes ?personSkill ;
+                :skillLevel ?skillLevel ] ;
+          :firstName ?personFirstName ;
+          :lastName ?personLastName ;
+          :hasAvailability ?availability.
+
+?availability 
+          :mustFitWith
+              [:durationFrom ?availableFrom ; 
+               :durationTo ?availableTo].
+
+Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo) && (?skillLevel >= "3"^^xsd:long) && ?projectSkill = ?personSkill).
+}
