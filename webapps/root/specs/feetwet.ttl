@@ -161,7 +161,7 @@ spec:person
       ; api:formatter 
       	  [ a api:XsltFormatter
 	    ; api:name 'html'
-		    ; api:stylesheet 'xsltsheets/result-osm.xsl'
+		    ; api:stylesheet 'xsltsheets/result-osm-person.xsl'
       	    ; extras:metadataOptions "bindings,formats,versions"
       	    ; api:mimeType 'text/html'
 	    ]              

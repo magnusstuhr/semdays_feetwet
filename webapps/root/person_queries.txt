@@ -4,21 +4,22 @@ Find all projects that meets this person's availability:
 
 prefix :        <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
 
-SELECT DISTINCT ?personFirstName ?personLastName
+SELECT ?projectTitle
 WHERE {
 
-    ?project 
-    :lastsFor[:durationFrom ?durationFrom ;
-              :durationTo ?durationTo].
+    ?project  :lastsFor [:durationFrom ?durationFrom ;
+              :durationTo ?durationTo ] ;
+              :projectTitle ?projectTitle .
 
-    <http://semanticdays.org/workshop/person/24>
+    <http://semanticdays.org/workshop/person/3>
             :firstName ?personFirstName ;
             :lastName ?personLastName ;
             :hasAvailability ?availability.
 
-?availability :mustFitWith[:durationFrom ?availableFrom ; :durationTo ?availableTo].
+?availability :mustFitWith[:durationFrom ?availableFrom ;
+                           :durationTo ?availableTo].
 
-Filter(?durationFrom = ?availableFrom && ?durationTo = ?availableTo).
+Filter(?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo).
 }
 
 2) PERSON
@@ -27,54 +28,48 @@ Find all projects that meets this person's availability and skill:
 
 prefix :        <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
 
-SELECT DISTINCT ?personFirstName ?personLastName
+SELECT ?projectTitle ?skillname
 WHERE {
 
-    ?project 
-           :lastsFor 
+    ?project
+           :lastsFor
                [:durationFrom ?durationFrom ;
                 :durationTo ?durationTo];
-           :needs ?projectSkill .
+           :needs ?skill ;
+           :projectTitle ?projectTitle .
 
-    <http://semanticdays.org/workshop/person/24> 
-            :hasProficiency [ :characterizes ?personSkill ] ;
+    ?person
+            :hasProficiency [ :characterizes ?skill ] ;
             :firstName ?personFirstName ;
             :lastName ?personLastName ;
             :hasAvailability ?availability.
 
+    ?skill :skillType ?skillname .
+
 ?availability :mustFitWith[:durationFrom ?availableFrom ; :durationTo ?availableTo].
 
-Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo) && (?projectSkill = ?personSkill)).
+Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo)).
 }
 
 3) PERSON
 
-Find all projects that meets this person's availability and skill, with a skill level of 3 or higher:
+Find all projects that meets this person's skill
 
-prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix :        <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
 
-SELECT DISTINCT ?personFirstName ?personLastName
+SELECT ?projectTitle ?skillname
 WHERE {
 
-    ?project 
-          :lastsFor 
-               [:durationFrom ?durationFrom ;
-                :durationTo ?durationTo];
-          :needs ?projectSkill .
+    ?project
+           :needs ?skill ;
+           :projectTitle ?projectTitle .
 
-    <http://semanticdays.org/workshop/person/24>
-          :hasProficiency
-              [ :characterizes ?personSkill ;
-                :skillLevel ?skillLevel ] ;
-          :firstName ?personFirstName ;
-          :lastName ?personLastName ;
-          :hasAvailability ?availability.
+    ?person
+            :hasProficiency [ :characterizes ?skill ] ;
+            :firstName ?personFirstName ;
+            :lastName ?personLastName .
 
-?availability 
-           :mustFitWith
-                 [:durationFrom ?availableFrom ; 
-                  :durationTo ?availableTo].
+    ?skill :skillType ?skillname .
 
-Filter((?durationFrom >= ?availableFrom && ?durationTo <= ?availableTo) && (?skillLevel >= "3"^^xsd:long) && ?projectSkill = ?personSkill).
 }
+
