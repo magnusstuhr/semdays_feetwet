@@ -264,10 +264,14 @@ spec:skill
       ; api:formatter
       	  [ a api:XsltFormatter
 	    ; api:name 'html'
-		    ; api:stylesheet 'xsltsheets/result-osm.xsl'
+		    ; api:stylesheet 'xsltsheets/result-osm-skill.xsl'
       	    ; extras:metadataOptions "bindings,formats,versions"
       	    ; api:mimeType 'text/html'
 	    ]
+      ; api:variable [
+      		       api:name "skill";
+                       api:value "http://semanticdays.org/workshop/skill/{id}";
+		       api:type rdfs:Resource;]
 .
 
 

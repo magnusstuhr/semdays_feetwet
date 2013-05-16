@@ -4,7 +4,7 @@ Find the names of persons with this skill:
 
 prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
 
-SELECT DISTINCT ?personFirstName ?personLastName
+SELECT ?personFirstName ?personLastName
 
 WHERE {
 
@@ -18,9 +18,9 @@ WHERE {
 
 Find all projects who require this skill:
 
-prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial/>
+prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
 
-SELECT DISTINCT ?projectTitle
+SELECT ?project ?projectTitle
 
 WHERE {
     ?project 
@@ -34,14 +34,15 @@ Find what persons can staff any project requiring this skill, who are also avail
 
 prefix : <http://www.posccaesar.org/wiki/PCA/SemanticDays2013/Tutorial#>
 
-SELECT DISTINCT ?personFirstName ?personLastName
+SELECT DISTINCT ?personFirstName ?personLastName ?projectTitle
 WHERE {
 
     ?project 
           :lastsFor 
               [:durationFrom ?durationFrom ;
                :durationTo ?durationTo];
-          :needs <http://semanticdays.org/workshop/skill/1> .
+          :needs <http://semanticdays.org/workshop/skill/1> ;
+          :projectTitle ?projectTitle .
 
     ?person 
           :hasProficiency
