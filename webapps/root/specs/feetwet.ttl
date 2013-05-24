@@ -120,6 +120,7 @@ spec:personWithSkillsViewer a api:Viewer
     ; api:properties "hasProficiency.characterizes.skillType"
     ; api:properties "hasProficiency.skillLevel"
     ; api:properties "hasAvailability.mustFitWith.*"
+    ; api:properties "sameAs"
     .
 
 spec:nameViewer a api:Viewer
@@ -314,13 +315,15 @@ voc:skillType api:label "skillType" .
 voc:dependsUpon api:label "dependsUpon" .
 
 
-################## RDF/s ###########################
+################## RDF/s / OWL ###########################
 
 rdf:type
     api:label "type"
     ; rdfs:range rdfs:Class
     .  
 
+
+owl:sameAs api:label "sameAs" .
 
 ########################## Api ##########################
       
